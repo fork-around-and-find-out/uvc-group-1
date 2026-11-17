@@ -25,48 +25,47 @@
 | FR19 | FR | The system shall allow the ordering of customizable items (size, letters, colors) by the customer | MUST HAVE | VALIDATED | 2026-11-16 | Order product from GIFTS-4-U | Webshop |  |
 | FR20 | FR | The system shall allow the customer to view their delivery time | MUST HAVE | VALIDATED | 2026-11-16 | Order product from GIFTS-4-U | Webshop |  |
 | FR21 | FR | The system shall be able to notify the customer of a wide variety of "shipmant delayed" scenarios | MUST HAVE | VALIDATED | 2026-11-16 | Order product from Gifts-4-U | Webshop |  |
-| FR22 | FR | The system shall feature a variety of pre-made non-customizable products in the webshop | MUST HAVE | VALIDATED | 2026-11-16 | Order product from Gifts-4-U | Webshop |  |
-| FR23 | FR | The system shall offer the option to the customer to specify whether the customer is a Consumer or a Business | MUST HAVE | VALIDATED | 2026-11-16 | Account creation on Gifts-4-U | Webshop |  |
-| FR24 | FR | The system shall display a delivery time on each webshop's product that is informed by the factors that make up the supply chain (stock delays, busy times, etc.) | MUST HAVE | VALIDATED | 2026-11-16 | Order product from Gifts-4-U | Webshop |  |
-| FR25 | FR | The system shall display the amount that is in stock in the warehouse on the webshop's page for each individual product | MUST HAVE | VALIDATED | 2026-11-16 | Order products from Gifts-4-U | Webshop |  |
-| FR26 | FR | The system shall allow the customer to specify that their order has been received successfully and satisfactorily via the Webshop | MUST HAVE | VALIDATED | 2026-11-16 | Contact Gifts-4-U about shipment | Webshop |  |
-| FR27 | FR | The system shall allow the customer to specify that their order has not been received, been damaged or has not arrived in the correct quantity via the Webshop | MUST HAVE | VALIDATED | 2026-11-16 | Contact Gifts-4-U about shipment | Webshop |  |
-| FR28 | FR | The system shall allow the ordering of multiple products in one order | MUST HAVE | VALIDATED | 2026-11-16 | Order products from Gifts-4-U | Webshop |  |
-| FR29 | FR | The system shall allow the customer to return orders | MUST HAVE | VALIDATED | 2026-11-16 | Return orders from Gifts-4-U | Webshop |  |
-| FR30 | FR | The system shall reorder stock early based on predictions calculated from statistics. | COULD HAVE | VALIDATED | 2026-11-16 | Track stock availability | Warehouse |  |
-| FR31 | FR | The system shall allow stock to be added/removed from stock by staff members by scanning the products' SKU barcodes. | COULD HAVE | VALIDATED | 2026-11-16 | Track stock availability | Warehouse |  |
-| FR32 | FR | The supplier service shall answer each purchase order with "can fulfil" or "cannot fulfil", and send a delay message when it cannot. | MUST HAVE | VALIDATED | 2026-11-16 | Order stock from supplier | Hong Kong Novelty Goods |  |
-| FR33 | FR | The system shall calculate a purchase order's expected arrival as 2 weeks transport plus any delay reported by the supplier. | MUST HAVE | VALIDATED | 2026-11-16 | Track inbound shipment | Hong Kong Novelty Goods |  |
-| FR34 | FR | The supplier shall ship a purchase order complete or not at all. | MUST HAVE | VALIDATED | 2026-11-16 | Order stock from supplier | Hong Kong Novelty Goods | Client: all or nothing, no partial shipments |
-| FR35 | FR | The system shall automatically send production requests to PRINTZ when a customized order is placed. | MUST HAVE | VALIDATED | 2026-11-16 | Send production request | PRINTZ Production |  |
-| FR36 | FR | The system shall provide PRINTZ employees with all customization details, including text, images, colors, and product specifications. | MUST HAVE | VALIDATED | 2026-11-16 | Produce customized product | PRINTZ Production |  |
-| FR37 | FR | The system shall allow PRINTZ employees to update the production status of an order (Pending, In Production, Completed, Delayed). | MUST HAVE | VALIDATED | 2026-11-16 | Manage production order | PRINTZ Production |  |
-| FR38 | FR | The system shall notify GIFTS-4-U when a production order has been completed. | MUST HAVE | VALIDATED | 2026-11-16 | Track production progress | PRINTZ Production |  |
-| FR39 | FR | The system shall notify GIFTS-4-U when a production delay may impact the expected delivery date. | MUST HAVE | VALIDATED | 2026-11-16 | Monitor production delays | PRINTZ Production |  |
-| FR40 | FR | The system shall display all active production orders assigned to PRINTZ. | MUST HAVE | RAISED | 2026-11-16 | View production orders | PRINTZ Production |  |
-| FR41 | FR | The system shall record the estimated completion date for each production order. | MUST HAVE | VALIDATED | 2026-11-16 | Plan production schedule | PRINTZ Production |  |
-| FR42 | FR | The system shall allow PRINTZ employees to attach comments or notes to production orders. | SHOULD HAVE | VALIDATED | 2026-11-16 | Update production order | PRINTZ Production |  |
-| FR43 | FR | The system shall maintain a history of status changes for each production order. | SHOULD HAVE | VALIDATED | 2026-11-16 | Audit production activity | PRINTZ Production |  |
-| FR44 | FR | The system shall allow PRINTZ to reject production requests that contain missing or invalid customization information. | MUST HAVE | VALIDATED | 2026-11-16 | Validate production request | PRINTZ Production |  |
-| FR45 | FR | The system shall automatically inform GIFTS-4-U when a production request is rejected. | MUST HAVE | VALIDATED | 2026-11-16 | Handle rejected production request | PRINTZ Production |  |
-| FR46 | FR | The system shall link production orders to the corresponding customer order and SKU. | MUST HAVE | VALIDATED | 2026-11-16 | Trace order fulfillment | PRINTZ Production |  |
-| FR47 | FR | The system shall allow PRINTZ employees to mark customized products as ready for shipment. | MUST HAVE | VALIDATED | 2026-11-16 | Complete production order | PRINTZ Production |  |
-| FR48 | FR | The system shall generate production reports showing completed, delayed, and pending orders. | SHOULD HAVE | VALIDATED | 2026-11-16 | Generate management report | PRINTZ Production |  |
-| FR49 | FR | The system shall prioritize B2B production orders over standard customer orders when required. | COULD HAVE | VALIDATED | 2026-11-16 | Prioritize production queue | PRINTZ Production |  |
-| FR50 | FR | The system shall allow Gifts-4-U CEO to set reorder thresholds manually for different products. | MUST HAVE | VALIDATED | 2026-11-17 | Product restock | Control Tower |  |
-| FR51 | FR | The system shall send detailed information to DHL about each order, including the trajet, order number, SKUs, expected delivery time, fragile/nonfragile. | MUST HAVE | VALIDATED | 2026-11-17 | Track order delivery | DHL |  |
-| FR52 | FR | The system shall receive real-time updates on orders in transit for status changes and issues. | MUST HAVE | VALIDATED | 2026-11-17 | Track order delivery | DHL |  |
-| FR53 | FR | The system shall send an alert on international orders being held at the Chinese or the Dutch border. | MUST HAVE | VALIDATED | 2026-11-17 | Track order delivery | DHL |  |
-| FR54 | FR | The system shall have a section for orders in transit. | MUST HAVE | VALIDATED | 2026-11-17 | Track order delivery | DHL |  |
-| FR55 | FR | The DHL section should have filters for trajet, status, international. | MUST HAVE | RAISED | 2026-11-17 | Track order delivery | DHL |  |
-| FR56 | FR | The system shall add to estimated delivery time when DHL reports an issue with order. | MUST HAVE | RAISED | 2026-11-17 | Track order delivery | DHL |  |
-| FR57 | FR | The system should receive an estimated delay from DHL when an issue with an order arises. | SHOULD HAVE | RAISED | 2026-11-17 | Track order delivery | DHL |  |
+| FR22 | FR | The system shall offer the option to the customer to specify whether the customer is a Consumer or a Business | MUST HAVE | VALIDATED | 2026-11-16 | Account creation on Gifts-4-U | Webshop |  |
+| FR23 | FR | The system shall display a delivery time on each webshop's product that is informed by the factors that make up the supply chain (stock delays, busy times, etc.) | MUST HAVE | VALIDATED | 2026-11-16 | Order product from Gifts-4-U | Webshop |  |
+| FR24 | FR | The system shall display the amount that is in stock in the warehouse on the webshop's page for each individual product | MUST HAVE | VALIDATED | 2026-11-16 | Order products from Gifts-4-U | Webshop |  |
+| FR25 | FR | The system shall allow the customer to specify that their order has been received successfully and satisfactorily via the Webshop | MUST HAVE | VALIDATED | 2026-11-16 | Contact Gifts-4-U about shipment | Webshop |  |
+| FR26 | FR | The system shall allow the customer to specify that their order has not been received, been damaged or has not arrived in the correct quantity via the Webshop | MUST HAVE | VALIDATED | 2026-11-16 | Contact Gifts-4-U about shipment | Webshop |  |
+| FR27 | FR | The system shall allow the ordering of multiple products in one order | MUST HAVE | VALIDATED | 2026-11-16 | Order products from Gifts-4-U | Webshop |  |
+| FR28 | FR | The system shall allow the customer to return orders | MUST HAVE | VALIDATED | 2026-11-16 | Return orders from Gifts-4-U | Webshop |  |
+| FR29 | FR | The system shall reorder stock early based on predictions calculated from statistics. | COULD HAVE | VALIDATED | 2026-11-16 | Track stock availability | Warehouse |  |
+| FR30 | FR | The system shall allow stock to be added/removed from stock by staff members by scanning the products' SKU barcodes. | COULD HAVE | VALIDATED | 2026-11-16 | Track stock availability | Warehouse |  |
+| FR31 | FR | The supplier service shall answer each purchase order with "can fulfil" or "cannot fulfil", and send a delay message when it cannot. | MUST HAVE | VALIDATED | 2026-11-16 | Order stock from supplier | Hong Kong Novelty Goods |  |
+| FR32 | FR | The system shall calculate a purchase order's expected arrival as 2 weeks transport plus any delay reported by the supplier. | MUST HAVE | VALIDATED | 2026-11-16 | Track inbound shipment | Hong Kong Novelty Goods |  |
+| FR33 | FR | The supplier shall ship a purchase order complete or not at all. | MUST HAVE | VALIDATED | 2026-11-16 | Order stock from supplier | Hong Kong Novelty Goods | Client: all or nothing, no partial shipments |
+| FR34 | FR | The system shall automatically send production requests to PRINTZ when a customized order is placed. | MUST HAVE | VALIDATED | 2026-11-16 | Send production request | PRINTZ Production |  |
+| FR35 | FR | The system shall provide PRINTZ employees with all customization details, including text, images, colors, and product specifications. | MUST HAVE | VALIDATED | 2026-11-16 | Produce customized product | PRINTZ Production |  |
+| FR36 | FR | The system shall allow PRINTZ employees to update the production status of an order (Pending, In Production, Completed, Delayed). | MUST HAVE | VALIDATED | 2026-11-16 | Manage production order | PRINTZ Production |  |
+| FR37 | FR | The system shall notify GIFTS-4-U when a production order has been completed. | MUST HAVE | VALIDATED | 2026-11-16 | Track production progress | PRINTZ Production |  |
+| FR38 | FR | The system shall notify GIFTS-4-U when a production delay may impact the expected delivery date. | MUST HAVE | VALIDATED | 2026-11-16 | Monitor production delays | PRINTZ Production |  |
+| FR39 | FR | The system shall display all active production orders assigned to PRINTZ. | MUST HAVE | RAISED | 2026-11-16 | View production orders | PRINTZ Production |  |
+| FR40 | FR | The system shall record the estimated completion date for each production order. | MUST HAVE | VALIDATED | 2026-11-16 | Plan production schedule | PRINTZ Production |  |
+| FR41 | FR | The system shall allow PRINTZ employees to attach comments or notes to production orders. | SHOULD HAVE | VALIDATED | 2026-11-16 | Update production order | PRINTZ Production |  |
+| FR42 | FR | The system shall maintain a history of status changes for each production order. | SHOULD HAVE | VALIDATED | 2026-11-16 | Audit production activity | PRINTZ Production |  |
+| FR43 | FR | The system shall allow PRINTZ to reject production requests that contain missing or invalid customization information. | MUST HAVE | VALIDATED | 2026-11-16 | Validate production request | PRINTZ Production |  |
+| FR44 | FR | The system shall automatically inform GIFTS-4-U when a production request is rejected. | MUST HAVE | VALIDATED | 2026-11-16 | Handle rejected production request | PRINTZ Production |  |
+| FR45 | FR | The system shall link production orders to the corresponding customer order and SKU. | MUST HAVE | VALIDATED | 2026-11-16 | Trace order fulfillment | PRINTZ Production |  |
+| FR46 | FR | The system shall allow PRINTZ employees to mark customized products as ready for shipment. | MUST HAVE | VALIDATED | 2026-11-16 | Complete production order | PRINTZ Production |  |
+| FR47 | FR | The system shall generate production reports showing completed, delayed, and pending orders. | SHOULD HAVE | VALIDATED | 2026-11-16 | Generate management report | PRINTZ Production |  |
+| FR48 | FR | The system shall prioritize B2B production orders over standard customer orders when required. | COULD HAVE | VALIDATED | 2026-11-16 | Prioritize production queue | PRINTZ Production |  |
+| FR49 | FR | The system shall allow Gifts-4-U CEO to set reorder thresholds manually for different products. | MUST HAVE | VALIDATED | 2026-11-17 | Product restock | Control Tower |  |
+| FR50 | FR | The system shall send detailed information to DHL about each order, including the trajet, order number, SKUs, expected delivery time, fragile/nonfragile. | MUST HAVE | VALIDATED | 2026-11-17 | Track order delivery | DHL |  |
+| FR51 | FR | The system shall receive real-time updates on orders in transit for status changes and issues. | MUST HAVE | VALIDATED | 2026-11-17 | Track order delivery | DHL |  |
+| FR52 | FR | The system shall send an alert on international orders being held at the Chinese or the Dutch border. | MUST HAVE | VALIDATED | 2026-11-17 | Track order delivery | DHL |  |
+| FR53 | FR | The system shall have a section for orders in transit. | MUST HAVE | VALIDATED | 2026-11-17 | Track order delivery | DHL |  |
+| FR54 | FR | The DHL section should have filters for trajet, status, international. | MUST HAVE | RAISED | 2026-11-17 | Track order delivery | DHL |  |
+| FR55 | FR | The system shall add to estimated delivery time when DHL reports an issue with order. | MUST HAVE | RAISED | 2026-11-17 | Track order delivery | DHL |  |
+| FR56 | FR | The system should receive an estimated delay from DHL when an issue with an order arises. | SHOULD HAVE | RAISED | 2026-11-17 | Track order delivery | DHL |  |
 
 ## Non-Functional Requirements
 
 | # | FR/NFR | Requirement | Priority | SDLC Status | Last Status Change Date | Related Use Case | Owner in Project | Additional Info |
 |---|---|---|---|---|---|---|---|---|
-| NFR1 | NFR | The system shall automatically send an alert in the form of an email when any issues arise with B2B orders. | MUST HAVE | VALIDATED | 2026-11-13 | N/A |  |  |
+| NFR1 | NFR | The alert when any issues arise with B2B orders should be in the form of an email. | MUST HAVE | VALIDATED | 2026-11-13 | N/A |  |  |
 | NFR2 | NFR | The system shall identify products by their SKU (which should be a list of unique and standardized identifiers). | MUST HAVE | VALIDATED | 2026-11-13 | N/A | ? |  |
 | NFR3 | NFR | The system shall have the maximum delivery time set to 5 working days from the order. | MUST HAVE | VALIDATED | 2026-11-13 | N/A |  |  |
 | NFR4 | NFR | The system shall have an adjustable polling time (forwarehouse stock checks for example). | MUST HAVE | VALIDATED | 2026-11-13 | N/A |  |  |
@@ -82,3 +81,4 @@
 | NFR14 | NFR | The system's UI shall support mobile devices (specifically mobile phones). | MUST HAVE | VALIDATED | 2026-11-16 | N/A |  |  |
 | NFR15 | NFR | The system shall be built as a microservice architecture. | MUST HAVE | VALIDATED | 2026-11-16 | N/A |  |  |
 | NFR16 | NFR | the system shall be developed using Svelte 5 for the frontend and Express.js for the backend. | MUST HAVE | VALIDATED | 2026-11-16 | N/A |  |  |
+| NFR17 | NFR | The system shall feature a variety of pre-made non-customizable products in the webshop | MUST HAVE | VALIDATED | 2026-11-16 | Order product from Gifts-4-U | Webshop |  |
