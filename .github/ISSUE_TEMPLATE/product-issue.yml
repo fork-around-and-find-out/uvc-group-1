@@ -83,3 +83,21 @@ body:
           required: true
         - label: Reviewable as a single PR (text/diagram-as-code where possible, not a bundle of unrelated content)
           required: true
+  
+  - type: input
+    id: estimated-time
+    attributes:
+      label: Estimated time
+      description: How long should implementing this issue take?
+      placeholder: e.g. 4h, 2d
+    validations:
+      required: true
+  
+  - type: input
+    id: time-taken
+    attributes:
+      label: Time taken
+      description: Leave empty when creating the issue. Fill it in by editing the issue once the work is done.
+      placeholder: e.g. 6h
+    validations:
+      required: false
