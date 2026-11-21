@@ -1,6 +1,6 @@
 | Use Case Specification      |       |
 | --------------------------- | ----- |
-| Use Case Name               | Confirm Order Received / Report Damaged or Missing |
+| Use Case Name               | Confirm Order Received / Report Damaged or Missing (FR26, FR27) |
 | Actor(s)                    | Customer (B2C Consumer or B2B Business) |
 | Summary Description         | The Customer uses the Webshop to confirm that a delivered order arrived complete and undamaged, or to report that the order was not received, arrived damaged, or arrived with an incorrect quantity. GIFTS-4-U uses the confirmation to close the order and the report to follow up with the Customer and DHL (FR26, FR27). |
 | Priority                    | Must-Have |
