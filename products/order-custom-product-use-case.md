@@ -1,6 +1,6 @@
 | Use Case Specification      |       |
 | --------------------------- | ----- |
-| Use Case Name               | Order Custom Product |
+| Use Case Name               | Order Custom Product (FR19) |
 | Actor(s)                    | Customer (Consumer or Business) |
 | Summary Description         | The Customer creates a custom gift in the GIFTS-4-U webshop by choosing a blank product (e.g. a white mug or teddy bear) and specifying its size, letters and colors, then places the order after checking the stock level and estimated delivery time. The system automatically sends a production request with all customization details to PRINTZ. The use case covers three decision points: whether the blank item is in stock, whether PRINTZ accepts the customization details, and whether the order is a B2B order that moves ahead in the production queue. |
 | Priority                    | Must-Have |
@@ -35,12 +35,6 @@
 | Exception Paths             | E1. Customization incomplete (at step 4): |
 |                             | E1.1 The Customer tries to add the product to the cart without specifying the size, letters or colors. |
 |                             | E1.2 The system highlights the missing fields and does not add the product to the cart (B1). Resume at step 3. |
-|                             | E2. Production request rejected by PRINTZ (at step 12): |
-|                             | E2.1 PRINTZ rejects the production request because the customization details are missing or invalid, and states the reason (FR44). |
-|                             | E2.2 The system automatically informs GIFTS-4-U of the rejection and the reason (FR45). For a B2B order it also sends an email alert (NFR1). |
-|                             | E2.3 GIFTS-4-U staff contact the Customer to request corrected customization details, and the system updates the estimated delivery time shown to the Customer. |
-|                             | E2.4 The Customer supplies the corrected details, and the system sends a new production request to PRINTZ (FR35, FR36), queued as in step 10 or A3. Resume at step 12. |
-|                             | E2.5 If the Customer cancels instead, the system cancels the customized product from the order and releases its reserved blank items back to warehouse stock. The use case ends. |
 | Business Rules              | B1. A customized product can only be added to the cart once size, letters and colors are all specified, using only the options offered for that product. |
 |                             | B2. Each customized product in an order gets its own production request, linked to the order number and the product's SKU. |
 |                             | B3. B2B production requests are processed before B2C requests; requests of the same type are processed in order of arrival (FR49). |
