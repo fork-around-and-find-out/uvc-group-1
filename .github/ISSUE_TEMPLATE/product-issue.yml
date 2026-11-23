@@ -27,6 +27,8 @@ body:
       - UML Component diagram of the Microservice Architecture
       - API message design (logical data object) and API Specification per microservice.
       - UXD Testing (test script, questions and findings)
+      - Wiki page/section
+      - Sprint template
     validations:
       required: true
 
