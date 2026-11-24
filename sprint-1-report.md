@@ -38,25 +38,30 @@ Sprint 1 was the analysis and design sprint. The requirements list (55 FRs, 16 N
 | #17 Activity diagrams (3) | Lukas | 5 | – | Done (PRs #31, #32, #34) |
 | #15 ERD (whole system) | Dari | 5 | – | Done (PR #33) |
 | #24 Component diagram | Dari | 3 | – | In review (PR #56) |
-| #22 API message designs (LDOs) | Dari | 5 | – | In review (PRs #35–#40) |
-| #19 UXD testing plan | Ula, Tyrone | 3 | – | In review (PR #50) |
-| #18 Wireframes | Andries | 4 | – | To do |
-| #20 Wireflows | Ula | 4 | – | To do |
+| #22 API message designs (LDOs) | Dari | 5 | – | Done (PRs #35–#38, #40, #64) |
+| #19 UXD testing plan | Ula, Tyrone | 3 | – | Done (PR #50) |
+| #18 Wireframes | Andries | 4 | – | In review (PR #67) |
+| #20 Wireflows | Ula, Andries | 4 | – | To do |
 | #21 High-fidelity prototype | Ula | 8 | – | To do |
 | #23 API specifications (Swagger) | Unassigned | 6 | – | To do |
-| #54 User story backlog | Lukas | 4 | – | To do |
+| #54 User story backlog | Lukas | 4 | – | In review (PR #63) |
 | #5 Invite Mike to organization | Ula, Lukas | 0.1 | – | Done |
 | #44 Enable repository wiki | Lukas | 0.1 | – | Done |
 | #45 Adapt issue templates | Lukas | 0.1 | – | Done (PR #48) |
-| #46 Choose a development pipeline (wiki) | Unassigned | 0.3 | – | To do |
-| #47 Trigger build on push | Dari | 0.5 | – | To do |
+| #46 Choose a development pipeline (wiki) | Tyrone | 0.3 | – | Done (wiki page "CIN development pipeline") |
+| #47 Trigger build on push | Dari | 0.5 | – | Done |
 | #49 Inform developers on build fail | Dari | 0.5 | – | To do |
 | #51 Unit tests (wiki) | Unassigned | 1 | – | To do |
 | #52 Using pull requests (wiki) | Unassigned | 1 | – | To do |
 | #53 Branching model (wiki) | Ula | 2 | – | To do |
-| #55 Sprint report 1 | Tyrone | 5 | – | In progress |
+| #55 Sprint report 1 | Tyrone | 5 | – | In review (PR #58) |
+| #60 Update project risks | Lukas | – | – | Done |
+| #61 Update requirements priority | Dari | – | – | In review (PR #68) |
+| #62 Review pull requests | Lukas | – | – | Done |
+| #65 Update and correction | Lukas | – | – | To do |
+| #66 Update and correction UML component diagram | Dari | – | – | To do |
 
-Note: estimated hours for issues created on 23-11 come from the "Estimated time" field in GitHub; the other estimates were added for this report. [TO FILL IN] Each assignee fills in spent hours.
+Note: estimated hours for issues created on 23-11 come from the "Estimated time" field in GitHub; the other estimates were added for this report. Spent hours were not logged during the sprint; each assignee adds their spent hours before the end of the sprint (29-11). Logging hours from the start is one of the retrospective actions below.
 
 ## Retrospective summary
 
@@ -78,13 +83,13 @@ Summary of the test: not applicable, testing starts in sprint 2.
 
 ## Demo
 
-Summary of the demo: [TO FILL IN] what was shown and who attended.
+Summary of the demo: the sprint 1 demo is planned for 30-11-2026 (milestone "demo 1"). This section is completed after the demo with what was shown and who attended.
 
 | Field | Value |
 |---|---|
-| Start | [TO FILL IN] demo feedback |
-| Stop | [TO FILL IN] demo feedback |
-| Keep | [TO FILL IN] demo feedback |
+| Start | Added after the demo on 30-11 |
+| Stop | Added after the demo on 30-11 |
+| Keep | Added after the demo on 30-11 |
 
 ## Design documentation
 
@@ -108,9 +113,46 @@ Chosen use case: Order Custom Product. It is the most complex use case of this s
 
 ### Dataflow Diagram
 
-Level 0 DFD of the whole system (products/UCV DFD.png, PR #41). [TO FILL IN] the template asks for a DFD of this use case only; that diagram still has to be made.
+Data flow diagram of the Order Custom Product use case. Processes are numbered, data stores start with D, external entities are rectangles.
 
-![Level 0 DFD](../UCV%20DFD.png)
+```mermaid
+flowchart LR
+    C[Customer]
+    P[PRINTZ]
+    S[GIFTS-4-U staff]
+    D1[(D1 Products)]
+    D2[(D2 Orders)]
+    D3[(D3 Warehouse stock)]
+    D4[(D4 Task list)]
+    D5[(D5 Production queue)]
+
+    P1((1. Show product<br/>and options))
+    P2((2. Place order))
+    P3((3. Check and<br/>reserve stock))
+    P4((4. Send production<br/>request))
+    P5((5. Create restock<br/>task))
+
+    D1 -- product, options, SKU --> P1
+    D3 -- stock level --> P1
+    P1 -- options, stock, delivery time --> C
+    C -- customization, quantity --> P2
+    P2 -- order with customization --> D2
+    P2 -- order confirmation --> C
+    D2 -- order lines --> P3
+    D3 -- stock level --> P3
+    P3 -- reservation --> D3
+    P3 -- not enough stock --> P5
+    P5 -- restock task --> D4
+    D4 -- open tasks --> S
+    D2 -- order, account type --> P4
+    P4 -- request, B2B before B2C --> D5
+    P4 -- production request --> P
+    P -- accepted / rejected --> P4
+```
+
+For context, the level 0 DFD of the whole system (products/UCV DFD.png, PR #41):
+
+![Level 0 DFD](./products/UCV%20DFD.png)
 
 ### API specification and Message(s)
 
@@ -142,6 +184,11 @@ Every student should code. In this table you relate an issue on Github with a ta
 | #42 | – | Relocate journey map | Lukas | No review |
 | #43 | – | Relocate DFD | Lukas | No review |
 | #48 | #45 | Issue template: new product types | Lukas | Dari (approved) |
-| #35–#40 | #22 | LDOs (6 microservices) | Dari | Open, awaiting review |
-| #50 | #19 | UXD testing plan | Ula | Open, awaiting review |
+| #35–#38, #40, #64 | #22 | LDOs (6 microservices) | Dari | Lukas (approved; #39 replaced by #64) |
+| #50 | #19 | UXD testing plan | Ula | Lukas (approved) |
+| #59 | – | Update Hong Kong service requirements | Ula | Lukas (approved) |
 | #56 | #24 | Component diagram | Dari | Open, awaiting review |
+| #58 | #55 | Sprint report 1 | Tyrone | Lukas (changes requested, fixed) |
+| #63 | #54 | User stories | Lukas | Open, awaiting review |
+| #67 | #18 | Wireframes | Andries | Open, awaiting review |
+| #68 | #61 | Requirements priority rating | Dari | Open, awaiting review |
