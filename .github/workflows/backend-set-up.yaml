@@ -17,8 +17,9 @@ jobs:
           - control-tower-service
           - api-gateway-service
     defaults:
+      if: hashFiles(format('code/backend/{0}/**', matrix.service)) != ''
       run:
-        working-directory: code/backend/${{ matrix.service }} --if-present
+        working-directory: code/backend/${{ matrix.service }}
     steps:
       - uses: actions/checkout@v4
       - name: Set up Node.js
