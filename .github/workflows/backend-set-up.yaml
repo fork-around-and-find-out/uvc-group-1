@@ -1,15 +1,20 @@
-name: Main CI Pipeline
+name: Set Up (Build and Lint) Backend Service Checks
 on: [push, pull_request]
 jobs:
-  backend:
-    name: Build and lint ${{ matrix.service }}
+  backend-set-up-checks:
+    name: Set up ${{ matrix.service }}
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
         service:
           - auth-service
-          - car-service
+          - warehouse-service
+          - webshop-service
+          - hongkong-service
+          - dhl-service
+          - printz-service
+          - control-tower-service
           - api-gateway-service
     defaults:
       run:
@@ -23,13 +28,7 @@ jobs:
           cache: npm
           cache-dependency-path: code/backend/${{ matrix.service }}/package-lock.json
       - name: Install dependencies
-        env:
-          DATABASE_URL: file:/tmp/ci.sqlite
         run: npm ci
-      - name: Generate Prisma client
-        env:
-          DATABASE_URL: file:/tmp/ci.sqlite
-        run: npm run prisma:generate --if-present
       - name: Lint
         run: npm run lint
       - name: Build
