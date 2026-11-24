@@ -28,6 +28,8 @@ jobs:
           cache: npm
           cache-dependency-path: code/backend/${{ matrix.service }}/package-lock.json
       - name: Install dependencies
+        env:
+          DATABASE_URL: file:./tmp/db.sqlite
         run: npm ci
       - name: Lint
         run: npm run lint
