@@ -9,15 +9,14 @@ jobs:
       matrix:
         service:
           - auth-service
-          - warehouse-service
-          - webshop-service
-          - hongkong-service
-          - dhl-service
-          - printz-service
           - control-tower-service
           - api-gateway-service
+          # - warehouse-service
+          # - webshop-service
+          # - hongkong-service
+          # - dhl-service
+          # - printz-service
     defaults:
-      if: hashFiles(format('code/backend/{0}/**', matrix.service)) != ''
       run:
         working-directory: code/backend/${{ matrix.service }}
     steps:
