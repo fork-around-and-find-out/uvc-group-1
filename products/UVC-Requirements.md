@@ -10,7 +10,7 @@
 | FR4 | FR | The system shall automatically add a task to the Control Tower's task list when a delivery is delayed. | SHOULD HAVE | VALIDATED | 2026-11-13 | Track order delivery | DHL | |
 | FR5 | FR | The system shall automatically add a task to the Control Tower's task list when there is not enough stock to complete an order. | SHOULD HAVE | RAISED | 2026-11-13 | Track stock availability | Warehouse | |
 | FR6 | FR | The system shall allow the Director SCM to set a reorder threshold for each product. | MUST HAVE | VALIDATED | 2026-11-13 | Track stock availability | Warehouse | |
-| FR7 | FR | The system shall automatically reorder a product when it reaches its reorder threshold. | SHOULD HAVE | VALIDATED | 2026-11-13 | Track stock availability | Warehouse | |
+| FR7 | FR | The system shall automatically reorder a product when it reaches its reorder threshold. | SHOULD HAVE | VALIDATED | 2026-11-13 | Track stock availability | Warehouse | Manual reorder is possible|
 | FR8 | FR | The system shall track and show every movement of stock into and out of the warehouse. | SHOULD HAVE | VALIDATED | 2026-11-13 | Track stock availability | Warehouse | |
 | FR9 | FR | The system shall automatically calculate statistics on recent orders, including dead stock and sales trends. | MUST HAVE | VALIDATED | 2026-11-13 | Track stock availability | Warehouse | |
 | FR10 | FR | The system shall add returned products that are undamaged or repaired back to the warehouse stock. | COULD HAVE | VALIDATED | 2026-11-13 | Track stock availability | Warehouse | |
@@ -35,7 +35,7 @@
 | FR29 | FR | The system shall reorder stock early based on predictions from sales statistics. | COULD HAVE | VALIDATED | 2026-11-16 | Track stock availability | Warehouse | |
 | FR30 | FR | The system shall allow staff to add or remove stock by scanning SKU barcodes. | COULD HAVE | VALIDATED | 2026-11-16 | Track stock availability | Warehouse | |
 | FR31 | FR | The Hong Kong service shall answer each purchase order with "can fulfil" or "cannot fulfil", and send a delay message when it cannot. | SHOULD HAVE | VALIDATED | 2026-11-16 | Order stock from supplier | Hong Kong Novelty Goods | |
-| FR32 | FR | The Hong Kong service shall calculate a purchase order's expected arrival as 2 weeks' transport + 1 day plus any reported delay. | MUST HAVE | VALIDATED | 2026-11-16 | Track inbound shipment | Hong Kong Novelty Goods | |
+| FR32 | FR | The Hong Kong service shall calculate a purchase order's expected arrival as 2 weeks' transport + 1 day plus any reported delay. | MUST HAVE | VALIDATED | 2026-11-16 | Track inbound shipment | Hong Kong Novelty Goods | the 1-day turnaround was mentioned by Mike as a requirement|
 | FR33 | FR | The Hong Kong service shall ship a purchase order complete or not at all. | MUST HAVE | VALIDATED | 2026-11-16 | Order stock from supplier | Hong Kong Novelty Goods | Client: all or nothing, no partial shipments |
 | FR34 | FR | The system shall automatically send a production request to PRINTZ when a customized order is placed. | MUST HAVE | VALIDATED | 2026-11-16 | Send production request | PRINTZ Production | |
 | FR35 | FR | The system shall provide PRINTZ employees with all customization details, including text, images, colors, and product specifications. | MUST HAVE | VALIDATED | 2026-11-16 | Produce customized product | PRINTZ Production | |
