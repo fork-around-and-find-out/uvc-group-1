@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "build": "tsc",
+    "lint": "eslint .",
     "start": "node dist/server.js",
     "type-check": "tsc --noEmit",
     "test:api": "node test-api.js"
@@ -25,10 +26,14 @@
     "http-proxy-middleware": "^3.0.0"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
     "@types/node": "^24.19.0",
+    "eslint": "^10.15.0",
+    "globals": "^17.14.0",
     "tsx": "^4.23.0",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "typescript-eslint": "^8.74.0"
   }
 }

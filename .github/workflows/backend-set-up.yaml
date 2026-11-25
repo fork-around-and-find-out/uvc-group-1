@@ -1,0 +1,37 @@
+name: Set Up (Build and Lint) Backend Service Checks
+on: [push, pull_request]
+jobs:
+  backend-set-up-checks:
+    name: Set up ${{ matrix.service }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        service:
+          - auth-service
+          - control-tower-service
+          - api-gateway-service
+          # - warehouse-service
+          # - webshop-service
+          # - hongkong-service
+          # - dhl-service
+          # - printz-service
+    defaults:
+      run:
+        working-directory: code/backend/${{ matrix.service }}
+    steps:
+      - uses: actions/checkout@v6
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: code/backend/${{ matrix.service }}/package-lock.json
+      - name: Install dependencies
+        env:
+          DATABASE_URL: file:./tmp/db.sqlite
+        run: npm ci
+      - name: Lint
+        run: npm run lint
+      - name: Build
+        run: npm run build
