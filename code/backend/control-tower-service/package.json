@@ -1,0 +1,13 @@
+{
+  "name": "car-service",
+  "version": "1.0.0",
+  "description": "Control Tower REST API",
+  "type": "module",
+  "main": "",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^30.5.2"
+  }
+}
