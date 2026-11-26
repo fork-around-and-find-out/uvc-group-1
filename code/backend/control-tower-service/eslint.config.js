@@ -15,4 +15,18 @@ export default tseslint.config(
       '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
     },
   },
+  // Plain .js/.cjs files (tests, tooling) are CommonJS, so require() is fine there.
+  {
+    files: ['**/*.js', '**/*.cjs'],
+    rules: {
+      '@typescript-eslint/no-require-imports': 'off',
+    },
+  },
+  // Test files run under Jest, which provides test/expect/describe/etc. as globals.
+  {
+    files: ['**/*.test.{js,ts}', '**/*.spec.{js,ts}'],
+    languageOptions: {
+      globals: globals.jest,
+    },
+  },
 );
